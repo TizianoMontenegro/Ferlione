@@ -1,0 +1,21 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
+	"formatter": { "enabled": true, "indentStyle": "tab" },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"preset": "recommended",
+			"correctness": {
+				"noUnusedImports": "off",
+				"noUnusedVariables": "off"
+			}
+		}
+	},
+	"assist": { "actions": { "source": { "organizeImports": "off" } } },
+	"javascript": {
+		"formatter": { "quoteStyle": "single", "semicolons": "always" }
+	},
+	"files": {
+		"includes": ["astro.config.mjs", "src/**/*", "biome.json", "package.json"]
+	}
+}

@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects } from '../../data/site';
+---
+<Layout title="Trabajo — Ferlione"><section class="page-hero"><p class="section-label">Trabajo seleccionado</p><h1>Proyectos con una razón para existir.</h1><p>Una selección editorial de trabajos y casos conceptuales. Cada proyecto conecta un problema, unas decisiones y un resultado.</p></section><section class="section"><div class="projects-grid">{projects.map((project) => <ProjectCard project={project} />)}</div></section></Layout>
