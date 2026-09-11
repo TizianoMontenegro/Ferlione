@@ -199,18 +199,22 @@ select {
 	inset: 17%;
 	position: absolute;
 }
-.seal-mark {
-	color: var(--red);
-	font-family: var(--serif);
-	font-size: clamp(6rem, 15vw, 13rem);
-	line-height: 1;
+.hero__seal img {
+	border-radius: 50%;
+	height: 86%;
+	object-fit: cover;
+	width: 86%;
+	z-index: 1;
 }
 .seal-caption {
-	bottom: 16%;
+	background: var(--ink);
+	bottom: 8%;
 	font-size: 0.55rem;
 	letter-spacing: 0.17em;
+	padding: 0.2rem 0.45rem;
 	position: absolute;
 	text-transform: uppercase;
+	z-index: 2;
 }
 .band {
 	border-bottom: 1px solid var(--line);
