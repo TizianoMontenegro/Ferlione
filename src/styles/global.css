@@ -75,6 +75,9 @@ select {
 	background: rgba(9, 9, 8, 0.28);
 	border-bottom-color: rgba(243, 241, 233, 0.14);
 }
+.site-header:not(.is-scrolled) {
+	justify-content: center;
+}
 .wordmark {
 	align-items: center;
 	display: flex;
@@ -112,6 +115,11 @@ select {
 	margin-left: 0.5rem;
 }
 .mobile-nav {
+	display: none;
+}
+.site-header:not(.is-scrolled) .desktop-nav,
+.site-header:not(.is-scrolled) .header-cta,
+.site-header:not(.is-scrolled) .mobile-nav {
 	display: none;
 }
 .eyebrow,
