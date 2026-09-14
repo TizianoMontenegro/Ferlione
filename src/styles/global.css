@@ -90,6 +90,11 @@ select {
 	color: var(--red);
 	font-size: 1.15rem;
 }
+.wordmark__logo {
+	height: 2rem;
+	object-fit: contain;
+	width: 2rem;
+}
 .desktop-nav {
 	display: flex;
 	gap: 1.6rem;
