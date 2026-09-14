@@ -59,7 +59,7 @@ select {
 	left: 50%;
 	max-width: 1360px;
 	padding: 1.35rem 4vw;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	transform: translateX(-50%);
 	transition:
