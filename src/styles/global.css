@@ -92,7 +92,10 @@ select {
 }
 .wordmark__logo {
 	height: 2rem;
+	margin-right: 0.35rem;
 	object-fit: contain;
+	transform: scale(1.45);
+	transform-origin: center;
 	width: 2rem;
 }
 .desktop-nav {
