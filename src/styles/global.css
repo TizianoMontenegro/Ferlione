@@ -248,9 +248,8 @@ select {
 	position: absolute;
 }
 .hero__seal img {
-	border-radius: 50%;
 	height: 86%;
-	object-fit: cover;
+	object-fit: contain;
 	width: 86%;
 	z-index: 1;
 }
