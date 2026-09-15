@@ -393,6 +393,22 @@ select {
 	border-top: 1px solid var(--line);
 	padding-top: 1.5rem;
 }
+.team-card__photo {
+	align-items: center;
+	background: var(--paper-deep);
+	border: 1px solid var(--line);
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	min-height: 20rem;
+}
+.team-card__photo span {
+	color: var(--muted);
+	font-size: 0.68rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
 .team-card__index {
 	color: var(--red);
 	font-size: 0.72rem;
@@ -407,7 +423,15 @@ select {
 	letter-spacing: -0.05em;
 	margin: 0 0 1rem;
 }
-.team-card p:not(.team-card__index) {
+.team-card__role {
+	color: var(--red);
+	font-size: 0.68rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	margin: -0.5rem 0 1.5rem;
+	text-transform: uppercase;
+}
+.team-card p:not(.team-card__index):not(.team-card__role) {
 	color: var(--muted);
 	margin: 0 0 1.5rem;
 	max-width: 30rem;
