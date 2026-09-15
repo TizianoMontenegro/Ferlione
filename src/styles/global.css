@@ -202,7 +202,6 @@ select {
 }
 .band__track span {
 	flex: 0 0 auto;
-	padding-right: 2rem;
 	color: var(--red);
 	font-size: 0.7rem;
 	font-weight: 800;
