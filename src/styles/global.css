@@ -405,12 +405,12 @@ select {
 }
 .team-card__photo {
 	align-items: center;
+	aspect-ratio: 3 / 4;
 	background: var(--paper-deep);
 	border: 1px solid var(--line);
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1.5rem;
-	min-height: 20rem;
 }
 .team-card__photo span {
 	color: var(--muted);
