@@ -58,8 +58,29 @@ const technologyGroups = [
   <section id="contacto" class="contact-grid"><div class="contact-grid__aside"><p class="section-label">Contacto</p><h2>Un buen proyecto empieza con una pregunta concreta.</h2><p>Cuéntame sobre tu negocio, la idea que quieres ordenar o el problema que tu web actual no está resolviendo.</p><p class="form-note">También puedes escribir a <a href="mailto:hola@ferlione.com">hola@ferlione.com</a>.</p><nav class="social-links" aria-label="Redes sociales"><a href="https://www.whatsapp.com/" target="_blank" rel="noreferrer">WhatsApp <span>↗</span></a><a href="https://www.linkedin.com/in/ferlioneagency/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="https://www.instagram.com/ferlioneagency/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a><a href="https://www.youtube.com/@ferlioneagency" target="_blank" rel="noreferrer">YouTube <span>↗</span></a><a href="https://x.com/ferlioneagency" target="_blank" rel="noreferrer">X <span>↗</span></a></nav></div><form class="contact-form" id="contact-form"><div class="field"><label for="name">Nombre</label><input id="name" name="name" required autocomplete="name" placeholder="Tu nombre" /></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="tu@email.com" /></div><div class="field"><label for="project">Empresa o proyecto</label><input id="project" name="project" autocomplete="organization" placeholder="Cómo se llama" /></div><div class="field"><label for="mode">Cómo te gustaría trabajar</label><select id="mode" name="mode"><option>Proyecto puntual</option><option>Colaboración mensual</option><option>Todavía no lo sé</option></select></div><div class="field"><label for="message">Qué necesitas</label><textarea id="message" name="message" required placeholder="Cuéntame brevemente qué quieres construir o mejorar."></textarea></div><div class="form-foot"><span class="form-note">Respuesta inicial en un máximo de 2 días hábiles.</span><button class="button" type="submit">Enviar consulta <span>↗</span></button></div><div class="success-message" id="success-message" role="status">Gracias. Tu consulta quedó preparada en esta demo. Para recibir mensajes reales habrá que conectar el formulario a un endpoint.</div></form></section>
 </Layout>
 <script>
+  import { gsap } from 'gsap';
+
   const form = document.querySelector<HTMLFormElement>('#contact-form');
   const success = document.querySelector<HTMLElement>('#success-message');
+  const bandTrack = document.querySelector<HTMLElement>('.band__track');
+
+  if (bandTrack) {
+    const phrase = bandTrack.querySelector<HTMLElement>('span');
+
+    if (phrase) {
+      gsap.fromTo(
+        bandTrack,
+        { x: 0 },
+        {
+          duration: 22,
+          ease: 'none',
+          repeat: -1,
+          x: () => -phrase.getBoundingClientRect().width,
+        },
+      );
+    }
+  }
+
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;

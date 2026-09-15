@@ -196,7 +196,6 @@ select {
 	white-space: nowrap;
 }
 .band__track {
-	animation: band-scroll 24s linear infinite;
 	display: flex;
 	width: max-content;
 	will-change: transform;
@@ -208,16 +207,6 @@ select {
 	font-weight: 800;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
-}
-@keyframes band-scroll {
-	to {
-		transform: translateX(-12.5%);
-	}
-}
-@media (prefers-reduced-motion: reduce) {
-	.band__track {
-		animation: none;
-	}
 }
 .section {
 	margin: 0 auto;
