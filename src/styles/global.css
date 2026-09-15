@@ -216,6 +216,13 @@ select {
 	max-width: 1360px;
 	padding: 7rem 4vw;
 }
+.section--work {
+	background-image:
+		linear-gradient(rgba(9, 9, 8, 0.5), rgba(9, 9, 8, 0.5)),
+		url("/black-marble-texture.jpeg");
+	background-position: center;
+	background-size: cover;
+}
 .section--muted {
 	background: var(--paper-deep);
 	max-width: none;
