@@ -652,11 +652,10 @@ select {
 }
 .footer-logo {
 	display: block;
-	height: 4.5rem;
-	margin-bottom: 1.5rem;
+	flex: 0 0 auto;
+	height: 8rem;
 	object-fit: contain;
-	object-position: left center;
-	width: 4.5rem;
+	width: 8rem;
 }
 .footer-bottom {
 	border-top: 1px solid rgba(243, 241, 233, 0.2);
@@ -953,6 +952,9 @@ select {
 	.footer-bottom {
 		align-items: start;
 		flex-direction: column;
+	}
+	.footer-logo {
+		align-self: center;
 	}
 	.footer-bottom {
 		gap: 0.5rem;
