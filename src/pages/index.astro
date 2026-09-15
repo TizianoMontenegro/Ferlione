@@ -2,7 +2,13 @@
 
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import { problems, processSteps, projects, services } from '../data/site';
+import {
+	pricingPlans,
+	problems,
+	processSteps,
+	projects,
+	services,
+} from '../data/site';
 ---
 <Layout>
   <section class="hero"><div><p class="section-label">Desarrollo web · Argentina y remoto</p><h1>La web que tu negocio necesita para <em>avanzar.</em></h1><div class="hero__copy"><p>Ferlione desarrolla webs desde cero para negocios y profesionales. Si tienes una idea, la convertimos en un proyecto. Si todavía no está definida, te ayudamos a construirla.</p><div class="hero__actions"><a class="button" href="/contacto/">Cuéntame tu idea <span>↗</span></a><a class="button button--outline" href="/trabajo/">Ver trabajo</a></div></div></div></section>
@@ -10,6 +16,7 @@ import { problems, processSteps, projects, services } from '../data/site';
   <section class="section"><div class="section__intro"><div><p class="section-label">Trabajo seleccionado</p><h2>Ideas que encuentran una forma clara.</h2></div><p>Estos casos conceptuales muestran cómo pensamos cada proyecto. El trabajo real se documentará cuando existan proyectos publicables.</p></div><div class="projects-grid">{projects.map((project) => <ProjectCard project={project} />)}</div></section>
   <section class="section section--muted"><div class="split-grid"><div><p class="section-label">Problemas reconocibles</p><h2>Tu web debería ayudarte a explicar y vender.</h2><p class="split-grid__aside">Una buena web no empieza por la tecnología. Empieza por entender qué necesita decidir la persona que la visita.</p></div><ul class="problem-list">{problems.map((problem) => <li>{problem}</li>)}</ul></div></section>
   <section class="section"><div class="section__intro"><div><p class="section-label">Cómo podemos trabajar</p><h2>Una solución para cada punto de partida.</h2></div><p>Proyecto puntual o colaboración mensual. El alcance se define según el objetivo y el momento del negocio.</p></div><div class="service-grid">{services.map((service) => <article class="service-item"><span class="service-item__number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><div class="tag-row">{service.tags.map((tag) => <span class="tag">{tag}</span>)}</div></article>)}</div></section>
+  <section class="section section--pricing"><div class="section__intro"><div><p class="section-label">Formas de trabajar</p><h2>Un alcance claro antes de hablar de precio.</h2></div><p>No hay dos proyectos iguales. El presupuesto se define después de entender el objetivo, el contenido y la complejidad necesaria.</p></div><div class="pricing-grid">{pricingPlans.map((plan) => <article class:list={["pricing-card", { featured: plan.featured }]}><p class="pricing-card__label">{plan.label}</p><h3>{plan.title}</h3><p class="pricing-card__description">{plan.description}</p><p class="pricing-card__price">A medida</p><ul>{plan.features.map((feature) => <li>{feature}</li>)}</ul><a class="pricing-card__link" href="/contacto/">{plan.cta} <span>↗</span></a></article>)}</div></section>
   <section class="section section--muted"><div class="section__intro"><div><p class="section-label">El proceso</p><h2>Construir con criterio también es parte del resultado.</h2></div><a class="button button--outline" href="/proceso/">Ver el proceso <span>↗</span></a></div><div class="process-list">{processSteps.map((step) => <div class="process-row"><span class="process-row__number">{step[0]}</span><h3>{step[1]}</h3><p>{step[2]}</p></div>)}</div></section>
   <section class="cta"><p class="section-label">Siguiente paso</p><h2>Cuéntame qué necesitas construir.</h2><a class="button button--light" href="/contacto/">Hablemos de tu proyecto <span>↗</span></a></section>
 </Layout>

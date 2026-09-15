@@ -127,3 +127,43 @@ export const problems = [
 	'Recibes visitas y pocas conversaciones.',
 	'Necesitas lanzar una oferta sin improvisar.',
 ];
+
+export const pricingPlans = [
+	{
+		title: 'Ordenar la idea',
+		label: 'Punto de partida',
+		description:
+			'Para transformar una intuición o un problema abierto en un alcance posible.',
+		features: [
+			'Objetivos y prioridades',
+			'Mapa inicial del sitio',
+			'Siguiente paso recomendado',
+		],
+		cta: 'Definir el punto de partida',
+	},
+	{
+		title: 'Proyecto puntual',
+		label: 'Alcance definido',
+		description:
+			'Para construir y publicar una web con entregables, calendario y objetivos claros.',
+		features: [
+			'Estructura y contenido',
+			'Diseño responsive',
+			'Desarrollo y publicación',
+		],
+		cta: 'Pedir presupuesto',
+		featured: true,
+	},
+	{
+		title: 'Colaboración mensual',
+		label: 'Evolución continua',
+		description:
+			'Para mantener, medir y mejorar la web según las prioridades de cada mes.',
+		features: [
+			'Soporte y mantenimiento',
+			'Mejoras priorizadas',
+			'Revisión continua',
+		],
+		cta: 'Hablar de una colaboración',
+	},
+];

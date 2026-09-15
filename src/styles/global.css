@@ -455,6 +455,91 @@ select {
 	font-size: 0.65rem;
 	padding: 0.3rem 0.5rem;
 }
+.section--pricing {
+	background: var(--paper-deep);
+	max-width: none;
+}
+.pricing-grid {
+	display: grid;
+	gap: 1px;
+	grid-template-columns: repeat(3, 1fr);
+}
+.pricing-card {
+	background: var(--paper);
+	border: 1px solid var(--line);
+	display: flex;
+	flex-direction: column;
+	min-height: 420px;
+	padding: 2rem;
+}
+.pricing-card.featured {
+	background: var(--red);
+	border-color: var(--red);
+	color: #fff7eb;
+	transform: translateY(-1rem);
+}
+.pricing-card__label {
+	color: var(--red);
+	font-size: 0.68rem;
+	font-weight: 800;
+	letter-spacing: 0.16em;
+	margin: 0;
+	text-transform: uppercase;
+}
+.pricing-card.featured .pricing-card__label {
+	color: #ffd4c6;
+}
+.pricing-card h3 {
+	font-family: var(--serif);
+	font-size: clamp(2rem, 3vw, 3rem);
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	line-height: 0.95;
+	margin: 3rem 0 1rem;
+}
+.pricing-card__description {
+	color: var(--muted);
+	font-size: 0.9rem;
+	margin: 0;
+	max-width: 290px;
+}
+.pricing-card.featured .pricing-card__description {
+	color: #ffe3d8;
+}
+.pricing-card__price {
+	border-bottom: 1px solid var(--line);
+	border-top: 1px solid var(--line);
+	font-family: var(--serif);
+	font-size: 1.45rem;
+	margin: 2rem 0 1.2rem;
+	padding: 1rem 0;
+}
+.pricing-card ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.pricing-card li {
+	color: var(--muted);
+	font-size: 0.82rem;
+	padding: 0.35rem 0;
+}
+.pricing-card li::before {
+	color: var(--red);
+	content: "＋";
+	margin-right: 0.45rem;
+}
+.pricing-card__link {
+	border-bottom: 1px solid currentColor;
+	font-size: 0.78rem;
+	font-weight: 700;
+	margin-top: auto;
+	padding-bottom: 0.35rem;
+	width: fit-content;
+}
+.pricing-card__link span {
+	margin-left: 0.5rem;
+}
 .process-list {
 	border-top: 1px solid var(--line);
 }
@@ -644,6 +729,10 @@ select {
 	list-style: none;
 	padding: 0.35rem 0.55rem;
 }
+.pricing-card.featured li,
+.pricing-card.featured li::before {
+	color: #ffe3d8;
+}
 .contact-grid {
 	display: grid;
 	gap: 5rem;
@@ -785,6 +874,7 @@ select {
 	}
 	.projects-grid,
 	.service-grid,
+	.pricing-grid,
 	.split-grid,
 	.case-hero,
 	.contact-grid {
@@ -803,6 +893,9 @@ select {
 	}
 	.service-item h3 {
 		margin: 1.5rem 0 0.8rem;
+	}
+	.pricing-card.featured {
+		transform: none;
 	}
 	.process-row {
 		gap: 0.8rem;
