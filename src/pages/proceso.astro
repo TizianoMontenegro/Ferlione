@@ -1,5 +1,0 @@
----
-import Layout from '../layouts/Layout.astro';
-import { processSteps } from '../data/site';
----
-<Layout title="Proceso — Ferlione"><section class="page-hero"><p class="section-label">Proceso</p><h1>Menos incertidumbre. Mejores decisiones.</h1><p>El proceso convierte una idea abierta en una web que se puede explicar, usar y mejorar.</p></section><section class="section"><div class="process-list">{processSteps.map((step) => <div class="process-row"><span class="process-row__number">{step[0]}</span><h3>{step[1]}</h3><p>{step[2]}</p></div>)}</div></section><section class="cta"><p class="section-label">¿En qué etapa estás?</p><h2>Podemos ordenar el siguiente paso.</h2><a class="button button--light" href="/contacto/">Hablemos <span>↗</span></a></section></Layout>

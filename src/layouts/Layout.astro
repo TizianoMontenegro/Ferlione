@@ -18,7 +18,7 @@ const {
       <div class="wordmark" aria-label="Ferlione"><img class="wordmark__logo" src="/ferlione-logo.png" alt="" /><span>FERLIONE</span></div>
     </header>
     <main id="contenido"><slot /></main>
-    <footer class="site-footer"><div class="footer-top"><div><p class="footer-kicker">León de hierro</p><p class="footer-title">Una base digital preparada para crecer.</p></div><a class="button button--light" href="/contacto/">Cuéntame tu idea <span>↗</span></a></div><div class="footer-bottom"><span>© {new Date().getFullYear()} Ferlione</span><span>Argentina · Trabajo remoto</span><a href="mailto:hola@ferlione.com">hola@ferlione.com</a></div></footer>
+    <footer class="site-footer"><div class="footer-top"><div><p class="footer-kicker">León de hierro</p><p class="footer-title">Una base digital preparada para crecer.</p></div><a class="button button--light" href="/#contacto">Cuéntame tu idea <span>↗</span></a></div><div class="footer-bottom"><span>© {new Date().getFullYear()} Ferlione</span><span>Argentina · Trabajo remoto</span><a href="mailto:hola@ferlione.com">hola@ferlione.com</a></div></footer>
     <script>
       const header = document.querySelector('.site-header');
       const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 0);
