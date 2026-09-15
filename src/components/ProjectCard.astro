@@ -1,0 +1,9 @@
+---
+import type { projects } from '../data/site';
+type Project = (typeof projects)[number];
+const { project } = Astro.props as { project: Project };
+---
+<a class={`project-card ${project.accent}`} href={`/trabajo/${project.slug}`}>
+  <div class="project-art" aria-hidden="true"><span class="project-art__eyebrow">{project.category}</span><span class="project-art__mark">F</span><span class="project-art__line"></span></div>
+  <div class="project-card__body"><div><p class="eyebrow">{project.service}</p><h3>{project.name}</h3></div><span class="arrow" aria-hidden="true">↗</span><p class="project-card__summary">{project.summary}</p></div>
+</a>
