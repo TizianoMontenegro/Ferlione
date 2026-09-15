@@ -650,6 +650,14 @@ select {
 	margin: 0.8rem 0 0;
 	max-width: 500px;
 }
+.footer-logo {
+	display: block;
+	height: 4.5rem;
+	margin-bottom: 1.5rem;
+	object-fit: contain;
+	object-position: left center;
+	width: 4.5rem;
+}
 .footer-bottom {
 	border-top: 1px solid rgba(243, 241, 233, 0.2);
 	color: #aaa89f;
