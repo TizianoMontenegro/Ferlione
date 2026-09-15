@@ -381,6 +381,9 @@ select {
 	gap: 0;
 	grid-template-columns: repeat(4, 1fr);
 }
+.services-modes {
+	margin-top: 6rem;
+}
 .service-item {
 	border-left: 1px solid var(--line);
 	min-height: 300px;
@@ -813,6 +816,9 @@ select {
 	}
 	.service-grid {
 		gap: 2rem;
+	}
+	.services-modes {
+		margin-top: 4rem;
 	}
 	.service-item,
 	.service-item:last-child {
