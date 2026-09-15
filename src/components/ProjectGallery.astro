@@ -8,13 +8,13 @@ const { project } = Astro.props as { project: Project };
     {project.gallery.map((image, index) => (
       <figure class="project-gallery__slide">
         <img src={image.src} alt={image.alt} loading={index === 0 ? 'eager' : 'lazy'} />
-        <figcaption><span>{String(index + 1).padStart(2, '0')}</span>{image.label}</figcaption>
+        <figcaption><span class="project-gallery__caption-index">{String(index + 1).padStart(2, '0')}</span>{image.label}</figcaption>
       </figure>
     ))}
   </div>
   <div class="project-gallery__controls">
     <button type="button" data-gallery-prev aria-label="Imagen anterior">←</button>
-    <span data-gallery-status>01 / {String(project.gallery.length).padStart(2, '0')}</span>
+    <span class="project-gallery__status" data-gallery-status>01 / {String(project.gallery.length).padStart(2, '0')}</span>
     <button type="button" data-gallery-next aria-label="Imagen siguiente">→</button>
   </div>
 </div>
