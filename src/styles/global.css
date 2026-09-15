@@ -806,6 +806,26 @@ select {
 .contact-grid__aside p {
 	color: var(--muted);
 }
+.social-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem 1rem;
+	margin-top: 2rem;
+}
+.social-links a {
+	border-bottom: 1px solid var(--line);
+	font-size: 0.78rem;
+	font-weight: 700;
+	padding-bottom: 0.35rem;
+}
+.social-links a:hover {
+	border-bottom-color: var(--red);
+	color: var(--red);
+}
+.social-links span {
+	color: var(--red);
+	margin-left: 0.35rem;
+}
 .contact-form {
 	border-top: 1px solid var(--line);
 }
