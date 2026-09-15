@@ -197,18 +197,24 @@ select {
 	padding: 1rem 0;
 	white-space: nowrap;
 }
-.band p {
+.band__track {
 	animation: marquee 22s linear infinite;
+	display: flex;
+	width: max-content;
+	will-change: transform;
+}
+.band__track span {
+	flex: 0 0 auto;
+	padding-right: 2rem;
 	color: var(--red);
 	font-size: 0.7rem;
 	font-weight: 800;
 	letter-spacing: 0.18em;
-	margin: 0;
 	text-transform: uppercase;
 }
 @keyframes marquee {
 	to {
-		transform: translateX(-30%);
+		transform: translateX(-50%);
 	}
 }
 .section {
@@ -982,7 +988,12 @@ select {
 	html {
 		scroll-behavior: auto;
 	}
-	.band p {
+	.band__track {
 		animation: none;
+		justify-content: center;
+		width: 100%;
+	}
+	.band__track span[aria-hidden="true"] {
+		display: none;
 	}
 }
