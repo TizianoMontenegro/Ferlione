@@ -653,9 +653,9 @@ select {
 .footer-logo {
 	display: block;
 	flex: 0 0 auto;
-	height: 8rem;
+	height: 16rem;
 	object-fit: contain;
-	width: 8rem;
+	width: 16rem;
 }
 .footer-bottom {
 	border-top: 1px solid rgba(243, 241, 233, 0.2);
