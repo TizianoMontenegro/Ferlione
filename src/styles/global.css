@@ -411,6 +411,8 @@ select {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1.5rem;
+	object-fit: cover;
+	width: 100%;
 }
 .team-card__photo span {
 	color: var(--muted);
