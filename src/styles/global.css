@@ -384,6 +384,34 @@ select {
 .services-modes {
 	margin-top: 6rem;
 }
+.team-grid {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+.team-card {
+	border-top: 1px solid var(--line);
+	padding-top: 1.5rem;
+}
+.team-card__index {
+	color: var(--red);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	margin: 0 0 3rem;
+}
+.team-card h3 {
+	font-family: var(--serif);
+	font-size: clamp(2rem, 4vw, 3.5rem);
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	margin: 0 0 1rem;
+}
+.team-card p:not(.team-card__index) {
+	color: var(--muted);
+	margin: 0 0 1.5rem;
+	max-width: 30rem;
+}
 .service-item {
 	border-left: 1px solid var(--line);
 	min-height: 300px;
@@ -808,6 +836,7 @@ select {
 	}
 	.projects-grid,
 	.service-grid,
+	.team-grid,
 	.pricing-grid,
 	.split-grid,
 	.case-hero,
