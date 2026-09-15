@@ -45,7 +45,7 @@ const technologyGroups = [
 ---
 <Layout>
   <section class="hero"><div><p class="section-label">Desarrollo web · Argentina y remoto</p><h1>La web que tu negocio necesita para <em>avanzar.</em></h1><div class="hero__copy"><p>Ferlione desarrolla webs desde cero para negocios y profesionales. Si tienes una idea, la convertimos en un proyecto. Si todavía no está definida, te ayudamos a construirla.</p><div class="hero__actions"><a class="button" href="#contacto">Cuéntame tu idea <span>↗</span></a><a class="button button--outline" href="#trabajo">Ver trabajo</a></div></div></div></section>
-  <div class="band"><div class="band__track"><span>ESTRATEGIA&nbsp;·&nbsp;ESTRUCTURA&nbsp;·&nbsp;DESARROLLO&nbsp;·&nbsp;EVOLUCIÓN&nbsp;·&nbsp;</span><span aria-hidden="true">ESTRATEGIA&nbsp;·&nbsp;ESTRUCTURA&nbsp;·&nbsp;DESARROLLO&nbsp;·&nbsp;EVOLUCIÓN&nbsp;·&nbsp;</span><span aria-hidden="true">ESTRATEGIA&nbsp;·&nbsp;ESTRUCTURA&nbsp;·&nbsp;DESARROLLO&nbsp;·&nbsp;EVOLUCIÓN&nbsp;·&nbsp;</span><span aria-hidden="true">ESTRATEGIA&nbsp;·&nbsp;ESTRUCTURA&nbsp;·&nbsp;DESARROLLO&nbsp;·&nbsp;EVOLUCIÓN&nbsp;·&nbsp;</span><span aria-hidden="true">ESTRATEGIA&nbsp;·&nbsp;ESTRUCTURA&nbsp;·&nbsp;DESARROLLO&nbsp;·&nbsp;EVOLUCIÓN&nbsp;·&nbsp;</span><span aria-hidden="true">ESTRATEGIA&nbsp;·&nbsp;ESTRUCTURA&nbsp;·&nbsp;DESARROLLO&nbsp;·&nbsp;EVOLUCIÓN&nbsp;·&nbsp;</span></div></div>
+  <div class="band"><div class="band__track"><span>ESTRATEGIA&nbsp;·&nbsp;</span><span>ESTRUCTURA&nbsp;·&nbsp;</span><span>DESARROLLO&nbsp;·&nbsp;</span><span>EVOLUCIÓN&nbsp;·&nbsp;</span></div></div>
   <section id="trabajo" class="section section--work"><div class="section__intro"><div><p class="section-label">Trabajo seleccionado</p><h2>Proyectos con una razón para existir.</h2></div><p>Una selección editorial de trabajos y casos conceptuales. Cada proyecto conecta un problema, unas decisiones y un resultado.</p></div><div class="projects-grid">{projects.map((project, index) => <ProjectShowcase project={project} index={index} />)}</div></section>
   <section class="section section--muted"><div class="split-grid"><div><p class="section-label">Problemas reconocibles</p><h2>Tu web debería ayudarte a explicar y vender.</h2><p class="split-grid__aside">Una buena web no empieza por la tecnología. Empieza por entender qué necesita decidir la persona que la visita.</p></div><ul class="problem-list">{problems.map((problem) => <li>{problem}</li>)}</ul></div></section>
   <section id="servicios" class="section"><div class="section__intro"><div><p class="section-label">Cómo podemos trabajar</p><h2>Una solución para cada punto de partida.</h2></div><p>Elegimos el alcance según lo que el negocio necesita resolver. Puedes llegar con una idea clara o con un problema que todavía necesita estructura.</p></div><div class="service-grid">{services.map((service) => <article class="service-item"><span class="service-item__number">{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><div class="tag-row">{service.tags.map((tag) => <span class="tag">{tag}</span>)}</div></article>)}</div><div class="split-grid services-modes"><div><p class="section-label">Dos formas de empezar</p><h2>La idea puede estar clara o todavía no.</h2></div><div class="case-detail__body"><h3>Proyecto puntual</h3><p>Definimos alcance, entregables, calendario y puesta en marcha para construir una web concreta.</p><h3>Colaboración mensual</h3><p>Priorizamos soporte, contenido, optimización o nuevas funcionalidades según lo que el negocio necesite cada mes.</p></div></div></section>
@@ -64,36 +64,34 @@ const technologyGroups = [
   const success = document.querySelector<HTMLElement>('#success-message');
   const bandTrack = document.querySelector<HTMLElement>('.band__track');
 
-  if (bandTrack) {
+  if (bandTrack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const band = bandTrack.parentElement;
-    const firstUnit = bandTrack.querySelector<HTMLElement>('span');
+    const wordTemplates = Array.from(bandTrack.querySelectorAll<HTMLElement>('span'));
 
-    if (band && firstUnit) {
-      const unitWidth = firstUnit.getBoundingClientRect().width;
-      const speed = unitWidth / 22;
-      const entranceDistance = band.clientWidth + unitWidth;
+    if (band && wordTemplates.length > 0) {
+      let templateIndex = 0;
+      let offset = 0;
 
-      gsap.fromTo(
-        bandTrack,
-        { x: band.clientWidth },
-        {
-          duration: entranceDistance / speed,
-          ease: 'none',
-          x: -unitWidth,
-          onComplete: () => {
-            gsap.fromTo(
-              bandTrack,
-              { x: -unitWidth },
-              {
-                duration: 22,
-                ease: 'none',
-                repeat: -1,
-                x: -unitWidth * 2,
-              },
-            );
-          },
-        },
-      );
+      while (bandTrack.scrollWidth < band.clientWidth * 2) {
+        const clone = wordTemplates[templateIndex % wordTemplates.length].cloneNode(true) as HTMLElement;
+        clone.setAttribute('aria-hidden', 'true');
+        bandTrack.appendChild(clone);
+        templateIndex += 1;
+      }
+
+      const moveWords = () => {
+        offset -= 1.2 * gsap.ticker.deltaRatio(60);
+        const firstWord = bandTrack.firstElementChild as HTMLElement | null;
+
+        if (firstWord && -offset >= firstWord.offsetWidth) {
+          offset += firstWord.offsetWidth;
+          bandTrack.appendChild(firstWord);
+        }
+
+        bandTrack.style.transform = `translate3d(${offset}px, 0, 0)`;
+      };
+
+      gsap.ticker.add(moveWords);
     }
   }
 
