@@ -39,6 +39,23 @@ export const projects = [
 		accent: 'sand',
 		summary:
 			'Una presencia digital clara para convertir experiencia en conversaciones.',
+		gallery: [
+			{
+				src: '/columns-marble.jpeg',
+				alt: 'Vista conceptual de Norte Estudio',
+				label: 'Vista principal',
+			},
+			{
+				src: '/black-marble-texture.jpeg',
+				alt: 'Detalle conceptual de Norte Estudio',
+				label: 'Detalle de contenido',
+			},
+			{
+				src: '/black-volcanic-stone-texture.jpeg',
+				alt: 'Vista móvil conceptual de Norte Estudio',
+				label: 'Experiencia responsive',
+			},
+		],
 		challenge:
 			'La propuesta de valor estaba repartida entre distintos canales y era difícil entender el siguiente paso.',
 		approach:
@@ -61,6 +78,23 @@ export const projects = [
 		accent: 'red',
 		summary:
 			'Una web directa para que visitar, reservar y volver resulte sencillo.',
+		gallery: [
+			{
+				src: '/black-volcanic-stone-texture.jpeg',
+				alt: 'Vista conceptual de Casa Lumen',
+				label: 'Vista principal',
+			},
+			{
+				src: '/columns-marble.jpeg',
+				alt: 'Detalle conceptual de Casa Lumen',
+				label: 'Detalle de contenido',
+			},
+			{
+				src: '/black-marble-texture.jpeg',
+				alt: 'Vista móvil conceptual de Casa Lumen',
+				label: 'Experiencia responsive',
+			},
+		],
 		challenge:
 			'La marca tenía una oferta atractiva, pero la información importante quedaba escondida en una experiencia poco adaptable.',
 		approach:
@@ -83,6 +117,23 @@ export const projects = [
 		accent: 'blue',
 		summary:
 			'Una página de lanzamiento con foco en explicar, demostrar y activar.',
+		gallery: [
+			{
+				src: '/black-marble-texture.jpeg',
+				alt: 'Vista conceptual de Órbita Producto',
+				label: 'Vista principal',
+			},
+			{
+				src: '/black-volcanic-stone-texture.jpeg',
+				alt: 'Detalle conceptual de Órbita Producto',
+				label: 'Detalle de contenido',
+			},
+			{
+				src: '/columns-marble.jpeg',
+				alt: 'Vista móvil conceptual de Órbita Producto',
+				label: 'Experiencia responsive',
+			},
+		],
 		challenge:
 			'El producto resolvía un problema real, pero la página hablaba demasiado de funciones y poco del resultado.',
 		approach:
