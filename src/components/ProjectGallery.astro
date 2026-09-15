@@ -1,0 +1,42 @@
+---
+import type { projects } from '../data/site';
+type Project = (typeof projects)[number];
+const { project } = Astro.props as { project: Project };
+---
+<div class="project-gallery" data-gallery>
+  <div class="project-gallery__track">
+    {project.gallery.map((image, index) => (
+      <figure class="project-gallery__slide">
+        <img src={image.src} alt={image.alt} loading={index === 0 ? 'eager' : 'lazy'} />
+        <figcaption><span class="project-gallery__caption-index">{String(index + 1).padStart(2, '0')}</span>{image.label}</figcaption>
+      </figure>
+    ))}
+  </div>
+  <div class="project-gallery__controls">
+    <button type="button" data-gallery-prev aria-label="Imagen anterior">←</button>
+    <span class="project-gallery__status" data-gallery-status>01 / {String(project.gallery.length).padStart(2, '0')}</span>
+    <button type="button" data-gallery-next aria-label="Imagen siguiente">→</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((gallery) => {
+    const track = gallery.querySelector<HTMLElement>('.project-gallery__track');
+    const status = gallery.querySelector<HTMLElement>('[data-gallery-status]');
+    const slides = gallery.querySelectorAll<HTMLElement>('.project-gallery__slide');
+    if (!track || !status || slides.length < 2) return;
+
+    const updateStatus = () => {
+      const index = Math.round(track.scrollLeft / track.clientWidth);
+      status.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+    };
+
+    gallery.querySelector<HTMLButtonElement>('[data-gallery-prev]')?.addEventListener('click', () => {
+      track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+    });
+    gallery.querySelector<HTMLButtonElement>('[data-gallery-next]')?.addEventListener('click', () => {
+      track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+    });
+    track.addEventListener('scroll', updateStatus, { passive: true });
+  });
+</script>

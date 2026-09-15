@@ -1,0 +1,39 @@
+---
+import ProjectGallery from './ProjectGallery.astro';
+import type { projects } from '../data/site';
+
+type Project = (typeof projects)[number];
+const { project, index } = Astro.props as { project: Project; index: number };
+const variants = ['feature', 'reverse', 'editorial'] as const;
+const variant = variants[index % variants.length];
+---
+<article class={`project-showcase project-showcase--${variant}`}>
+  <div class="project-showcase__visual"><ProjectGallery project={project} /></div>
+  <div class="project-showcase__intro">
+    <p class="section-label">{project.category} · {project.year}</p>
+    <h3>{project.name}</h3>
+    <p class="project-showcase__summary">{project.summary}</p>
+    <div class="project-showcase__facts">
+      <span>{project.service}</span>
+      <span>{project.deliverables.length} entregables</span>
+    </div>
+  </div>
+  <div class="project-showcase__details">
+    <div class="project-showcase__detail">
+      <p class="eyebrow">El reto</p>
+      <p>{project.challenge}</p>
+    </div>
+    <div class="project-showcase__detail">
+      <p class="eyebrow">El enfoque</p>
+      <p>{project.approach}</p>
+    </div>
+    <div class="project-showcase__detail">
+      <p class="eyebrow">El resultado</p>
+      <p>{project.result}</p>
+    </div>
+    <div class="project-showcase__detail project-showcase__deliverables">
+      <p class="eyebrow">Entregables</p>
+      <ul class="deliverables">{project.deliverables.map((item) => <li>{item}</li>)}</ul>
+    </div>
+  </div>
+</article>
