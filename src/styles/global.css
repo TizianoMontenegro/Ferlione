@@ -233,6 +233,13 @@ select {
 .section--about {
 	background-image:
 		linear-gradient(rgba(9, 9, 8, 0.42), rgba(9, 9, 8, 0.42)),
+		url("/black-velvet-texture.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+section.section--muted:has(.problem-list) {
+	background-image:
+		linear-gradient(rgba(9, 9, 8, 0.42), rgba(9, 9, 8, 0.42)),
 		url("/black-volcanic-stone-texture.jpeg");
 	background-position: center;
 	background-size: cover;
