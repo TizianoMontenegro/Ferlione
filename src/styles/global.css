@@ -197,28 +197,42 @@ select {
 	padding: 1rem 0;
 	white-space: nowrap;
 }
-.band p {
-	animation: marquee 22s linear infinite;
+.band__track {
+	display: flex;
+	width: max-content;
+	will-change: transform;
+}
+.band__track span {
+	flex: 0 0 auto;
+	padding-right: 2rem;
 	color: var(--red);
 	font-size: 0.7rem;
 	font-weight: 800;
 	letter-spacing: 0.18em;
-	margin: 0;
 	text-transform: uppercase;
-}
-@keyframes marquee {
-	to {
-		transform: translateX(-30%);
-	}
 }
 .section {
 	margin: 0 auto;
 	max-width: 1360px;
 	padding: 7rem 4vw;
 }
+.section--work {
+	background-image:
+		linear-gradient(rgba(9, 9, 8, 0.5), rgba(9, 9, 8, 0.5)),
+		url("/black-marble-texture.jpeg");
+	background-position: center;
+	background-size: cover;
+}
 .section--muted {
 	background: var(--paper-deep);
 	max-width: none;
+}
+.section--about {
+	background-image:
+		linear-gradient(rgba(9, 9, 8, 0.42), rgba(9, 9, 8, 0.42)),
+		url("/black-volcanic-stone-texture.jpeg");
+	background-position: center;
+	background-size: cover;
 }
 .section__intro {
 	align-items: end;
@@ -650,6 +664,13 @@ select {
 	margin: 0.8rem 0 0;
 	max-width: 500px;
 }
+.footer-logo {
+	display: block;
+	flex: 0 0 auto;
+	height: 16rem;
+	object-fit: contain;
+	width: 16rem;
+}
 .footer-bottom {
 	border-top: 1px solid rgba(243, 241, 233, 0.2);
 	color: #aaa89f;
@@ -946,6 +967,9 @@ select {
 		align-items: start;
 		flex-direction: column;
 	}
+	.footer-logo {
+		align-self: center;
+	}
 	.footer-bottom {
 		gap: 0.5rem;
 		margin-top: 4rem;
@@ -957,8 +981,5 @@ select {
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
-	}
-	.band p {
-		animation: none;
 	}
 }

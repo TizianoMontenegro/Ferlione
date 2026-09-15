@@ -8,17 +8,58 @@ const {
 	title = 'Ferlione — Desarrollo web con estrategia',
 	description = 'Ferlione convierte ideas y necesidades de negocio en webs sólidas, claras y preparadas para crecer.',
 } = Astro.props;
+const siteUrl = 'https://ferlione.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const socialImage = new URL('/ferlione-logo.png', siteUrl).toString();
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'ProfessionalService',
+	name: 'Ferlione',
+	description,
+	url: siteUrl,
+	logo: socialImage,
+	email: 'hola@ferlione.com',
+	areaServed: 'AR',
+	serviceType: 'Desarrollo web',
+	address: {
+		'@type': 'PostalAddress',
+		addressCountry: 'AR',
+	},
+};
 ---
 <!doctype html>
 <html lang="es">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><meta name="generator" content={Astro.generator} /><link rel="icon" type="image/svg+xml" href="/favicon.svg" /><title>{title}</title></head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Ferlione" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#121210" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Ferlione" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <title>{title}</title>
+  </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
       <div class="wordmark" aria-label="Ferlione"><img class="wordmark__logo" src="/ferlione-logo.png" alt="" /><span>FERLIONE</span></div>
     </header>
     <main id="contenido"><slot /></main>
-    <footer class="site-footer"><div class="footer-top"><div><p class="footer-kicker">León de hierro</p><p class="footer-title">Una base digital preparada para crecer.</p></div><a class="button button--light" href="/#contacto">Cuéntame tu idea <span>↗</span></a></div><div class="footer-bottom"><span>© {new Date().getFullYear()} Ferlione</span><span>Argentina · Trabajo remoto</span><a href="mailto:hola@ferlione.com">hola@ferlione.com</a></div></footer>
+    <footer class="site-footer"><div class="footer-top"><div><p class="footer-kicker">León de hierro</p><p class="footer-title">Una base digital preparada para crecer.</p></div><img class="footer-logo" src="/ferlione-logo.png" alt="Ferlione" /><a class="button button--light" href="/#contacto">Cuéntame tu idea <span>↗</span></a></div><div class="footer-bottom"><span>© {new Date().getFullYear()} Ferlione</span><span>Argentina · Trabajo remoto</span><a href="mailto:hola@ferlione.com">hola@ferlione.com</a></div></footer>
     <script>
       const header = document.querySelector('.site-header');
       const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 0);
