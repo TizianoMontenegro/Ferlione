@@ -216,6 +216,13 @@ select {
 .section--work {
 	background-image:
 		linear-gradient(rgba(9, 9, 8, 0.5), rgba(9, 9, 8, 0.5)),
+		url("/black-marble-gold.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+.section#proceso {
+	background-image:
+		linear-gradient(rgba(9, 9, 8, 0.5), rgba(9, 9, 8, 0.5)),
 		url("/black-marble-texture.jpeg");
 	background-position: center;
 	background-size: cover;
