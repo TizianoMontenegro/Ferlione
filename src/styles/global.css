@@ -436,6 +436,32 @@ select {
 	margin: 0 0 1.5rem;
 	max-width: 30rem;
 }
+.technology-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+.technology-group {
+	border-top: 1px solid var(--line);
+	padding-top: 1.25rem;
+}
+.technology-group h3 {
+	font-size: 0.7rem;
+	letter-spacing: 0.14em;
+	margin: 0 0 1.5rem;
+	text-transform: uppercase;
+}
+.technology-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.technology-list li {
+	border-bottom: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 0.92rem;
+	padding: 0.65rem 0;
+}
 .service-item {
 	border-left: 1px solid var(--line);
 	min-height: 300px;
@@ -861,6 +887,7 @@ select {
 	.projects-grid,
 	.service-grid,
 	.team-grid,
+	.technology-grid,
 	.pricing-grid,
 	.split-grid,
 	.case-hero,
