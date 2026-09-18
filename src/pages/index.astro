@@ -65,7 +65,7 @@ const technologyGroups = [
   const bandTrack = document.querySelector<HTMLElement>('.band__track');
   const technologyAccordion = document.querySelector<HTMLElement>('[data-technology-accordion]');
 
-  document.querySelectorAll<HTMLAnchorElement>('[data-project-link]').forEach((link) => {
+  document.querySelectorAll<HTMLAnchorElement>('[data-project-link="placeholder"]').forEach((link) => {
     link.addEventListener('click', (event) => event.preventDefault());
   });
 

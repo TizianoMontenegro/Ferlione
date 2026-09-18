@@ -32,6 +32,7 @@ export const services = [
 export const projects = [
 	{
 		slug: 'aurea-propiedades',
+		url: 'https://aureapropiedades.vercel.app/',
 		name: 'Áurea Propiedades',
 		category: 'Inmobiliaria',
 		service: 'Diseño y desarrollo web',
@@ -92,6 +93,7 @@ export const projects = [
 	},
 	{
 		slug: 'casa-lumen',
+		url: null,
 		name: 'Casa Lumen',
 		category: 'Negocio local',
 		service: 'Diseño y experiencia móvil',
@@ -131,6 +133,7 @@ export const projects = [
 	},
 	{
 		slug: 'orbita-producto',
+		url: null,
 		name: 'Órbita Producto',
 		category: 'Producto digital',
 		service: 'Landing de lanzamiento',

@@ -31,6 +31,7 @@ describe('contenido del portfolio', () => {
 
 	test('el primer proyecto corresponde a Áurea Propiedades', () => {
 		expect(projects[0].name).toBe('Áurea Propiedades');
+		expect(projects[0].url).toBe('https://aureapropiedades.vercel.app/');
 		expect(projects[0].gallery).toHaveLength(7);
 		expect(projects[0].gallery.map((image) => image.src)).toEqual([
 			'/projects/aurea/a1.png',
