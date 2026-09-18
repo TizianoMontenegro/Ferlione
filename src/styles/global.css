@@ -535,17 +535,44 @@ section.section--muted:has(.problem-list) {
 }
 .technology-group {
 	border-top: 1px solid var(--line);
-	padding-top: 1.25rem;
+	padding-top: 0;
 }
-.technology-group h3 {
+.technology-group summary {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 1.25rem 0;
+	transition: color 180ms ease;
+	user-select: none;
+}
+.technology-group summary::-webkit-details-marker {
+	display: none;
+}
+.technology-group summary::after {
+	color: var(--muted);
+	content: "+";
+	font-size: 1.25rem;
+	font-weight: 300;
+	line-height: 1;
+	transition: transform 180ms ease;
+}
+.technology-group[open] summary::after {
+	transform: rotate(45deg);
+}
+.technology-group summary:hover,
+.technology-group summary:focus-visible {
+	color: var(--accent);
+}
+.technology-group summary {
 	font-size: 0.7rem;
 	letter-spacing: 0.14em;
-	margin: 0 0 1.5rem;
 	text-transform: uppercase;
 }
 .technology-list {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 1.25rem;
 	padding: 0;
 }
 .technology-list li {
