@@ -32,6 +32,15 @@ describe('contenido del portfolio', () => {
 	test('el primer proyecto corresponde a Áurea Propiedades', () => {
 		expect(projects[0].name).toBe('Áurea Propiedades');
 		expect(projects[0].gallery).toHaveLength(7);
+		expect(projects[0].gallery.map((image) => image.src)).toEqual([
+			'/projects/aurea/a0.png',
+			'/projects/aurea/a1.png',
+			'/projects/aurea/a2.png',
+			'/projects/aurea/a3.png',
+			'/projects/aurea/a4.png',
+			'/projects/aurea/a5.png',
+			'/projects/aurea/a6.png',
+		]);
 		expect(projects[0].year).toBe('Proyecto publicado');
 	});
 
