@@ -181,40 +181,68 @@ export const problems = [
 
 export const pricingPlans = [
 	{
-		title: 'Ordenar la idea',
-		label: 'Punto de partida',
+		title: 'Presencia inicial',
+		label: 'Para empezar',
 		description:
-			'Para transformar una intuición o un problema abierto en un alcance posible.',
+			'Una landing page clara para presentar tu propuesta y empezar a recibir consultas.',
+		problem:
+			'Tienes una oferta concreta, pero todavía no una presencia online que la explique y genere confianza.',
+		audience:
+			'Negocios locales, profesionales independientes y marcas personales.',
 		features: [
-			'Objetivos y prioridades',
-			'Mapa inicial del sitio',
-			'Siguiente paso recomendado',
+			'Estructura y copy de una landing page',
+			'Diseño responsive y desarrollo web',
+			'Contacto por WhatsApp o formulario',
 		],
-		cta: 'Definir el punto de partida',
+		cta: 'Hablar de mi presencia inicial',
 	},
 	{
-		title: 'Proyecto puntual',
-		label: 'Alcance definido',
+		title: 'Mejora digital',
+		label: 'Si ya tienes web',
 		description:
-			'Para construir y publicar una web con entregables, calendario y objetivos claros.',
+			'Rediseño de una web existente para modernizarla, ordenar el mensaje y hacerla más efectiva.',
+		problem:
+			'Tu web quedó atrás, no representa la calidad de tu negocio o recibe visitas que no se convierten en consultas.',
+		audience:
+			'Negocios y profesionales con una web que necesita una revisión profunda.',
 		features: [
-			'Estructura y contenido',
-			'Diseño responsive',
-			'Desarrollo y publicación',
+			'Auditoría de contenido y experiencia',
+			'Reestructuración y nuevo diseño responsive',
+			'Mejora de llamadas a la acción y contacto',
 		],
-		cta: 'Pedir presupuesto',
+		cta: 'Mejorar mi web',
+	},
+	{
+		title: 'Presencia profesional',
+		label: 'Para mostrar tu recorrido',
+		description:
+			'Una web corporativa completa para mostrar servicios, experiencia y casos de éxito con claridad.',
+		problem:
+			'Necesitas una base sólida para explicar lo que haces, respaldar tu experiencia y facilitar el siguiente paso.',
+		audience:
+			'Empresas de servicios, estudios y profesionales con una oferta consolidada.',
+		features: [
+			'Arquitectura de páginas y contenidos',
+			'Diseño de servicios, equipo y casos',
+			'Desarrollo, publicación y formulario de contacto',
+		],
+		cta: 'Pedir una propuesta',
 		featured: true,
 	},
 	{
-		title: 'Colaboración mensual',
-		label: 'Evolución continua',
+		title: 'Sistema de crecimiento',
+		label: 'Solución personalizada',
 		description:
-			'Para mantener, medir y mejorar la web según las prioridades de cada mes.',
+			'Una solución digital conectada a la operación de tu negocio para captar y gestionar oportunidades.',
+		problem:
+			'Tu negocio necesita reservas, automatizaciones, un área privada o una gestión de clientes que una web estándar no cubre.',
+		audience:
+			'Negocios en expansión y equipos con procesos digitales específicos.',
 		features: [
-			'Soporte y mantenimiento',
-			'Mejoras priorizadas',
-			'Revisión continua',
+			'Relevamiento del proceso y alcance',
+			'Reservas, automatizaciones o áreas privadas',
+			'Integraciones y evolución por etapas',
 		],
-		cta: 'Hablar de una colaboración',
+		cta: 'Diseñar mi sistema',
 	},
 ];

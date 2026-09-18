@@ -606,12 +606,16 @@ section.section--muted:has(.problem-list) {
 	flex-direction: column;
 	min-height: 420px;
 	padding: 2rem;
+	--pricing-meta-color: var(--muted);
+	--pricing-meta-label-color: var(--ink);
 }
 .pricing-card.featured {
 	background: var(--red);
 	border-color: var(--red);
 	color: #fff7eb;
 	transform: translateY(-1rem);
+	--pricing-meta-color: #ffe3d8;
+	--pricing-meta-label-color: #fff7eb;
 }
 .pricing-card__label {
 	color: var(--red);
@@ -640,6 +644,25 @@ section.section--muted:has(.problem-list) {
 }
 .pricing-card.featured .pricing-card__description {
 	color: #ffe3d8;
+}
+.pricing-card__meta {
+	display: grid;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+.pricing-card__meta p {
+	color: var(--pricing-meta-color);
+	font-size: 0.78rem;
+	line-height: 1.4;
+	margin: 0;
+}
+.pricing-card__meta strong {
+	color: var(--pricing-meta-label-color);
+	display: block;
+	font-size: 0.65rem;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.25rem;
+	text-transform: uppercase;
 }
 .pricing-card__price {
 	border-bottom: 1px solid var(--line);
