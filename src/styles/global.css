@@ -1109,7 +1109,7 @@ section.section--muted:has(.problem-list) {
 		padding-top: 1rem;
 	}
 	.technology-trigger + .technology-trigger {
-		padding-left: 0.75rem;
+		padding-left: 0;
 	}
 	.technology-panel {
 		height: 19rem;
