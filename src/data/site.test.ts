@@ -29,6 +29,12 @@ describe('contenido del portfolio', () => {
 		}
 	});
 
+	test('el primer proyecto corresponde a Áurea Propiedades', () => {
+		expect(projects[0].name).toBe('Áurea Propiedades');
+		expect(projects[0].gallery).toHaveLength(7);
+		expect(projects[0].year).toBe('Proyecto publicado');
+	});
+
 	test('cada plan explica su alcance y siguiente acción', () => {
 		for (const plan of pricingPlans) {
 			expect(plan.problem.length).toBeGreaterThan(20);
