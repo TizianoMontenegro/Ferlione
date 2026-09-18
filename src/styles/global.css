@@ -323,6 +323,9 @@ section.section--muted:has(.problem-list) {
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 }
+.project-showcase__link {
+	margin-top: 1.5rem;
+}
 .project-showcase__details {
 	display: grid;
 	gap: 1.5rem;
@@ -360,7 +363,7 @@ section.section--muted:has(.problem-list) {
 	display: none;
 }
 .project-gallery__slide {
-	aspect-ratio: 4 / 3;
+	aspect-ratio: 16 / 9;
 	background: var(--panel);
 	flex: 0 0 100%;
 	margin: 0;
@@ -372,7 +375,7 @@ section.section--muted:has(.problem-list) {
 .project-gallery__slide img {
 	display: block;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	width: 100%;
 }
 .project-gallery__slide::after {
@@ -528,31 +531,82 @@ section.section--muted:has(.problem-list) {
 	margin: 0 0 1.5rem;
 	max-width: 30rem;
 }
-.technology-grid {
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-}
-.technology-group {
+.technology-accordion {
 	border-top: 1px solid var(--line);
-	padding-top: 1.25rem;
 }
-.technology-group h3 {
+.technology-tabs {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.technology-trigger {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid var(--line);
+	color: var(--muted);
+	cursor: pointer;
+	display: flex;
 	font-size: 0.7rem;
+	font-weight: 700;
+	justify-content: space-between;
 	letter-spacing: 0.14em;
-	margin: 0 0 1.5rem;
+	padding: 1.25rem 1rem 1.25rem 0;
+	text-align: left;
 	text-transform: uppercase;
+	transition: color 180ms ease;
+}
+.technology-trigger + .technology-trigger {
+	padding-left: 1rem;
+}
+.technology-trigger span {
+	font-size: 1.25rem;
+	font-weight: 300;
+	line-height: 1;
+	transition: transform 180ms ease;
+}
+.technology-trigger:hover,
+.technology-trigger:focus-visible,
+.technology-trigger.is-active {
+	color: var(--accent);
+}
+.technology-panel {
+	height: 16rem;
+	overflow-y: auto;
+	padding: 1.5rem 0;
+}
+.technology-list[hidden] {
+	display: none;
 }
 .technology-list {
+	align-items: center;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+.technology-panel .technology-list {
+	display: grid;
+	gap: 0 2rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0;
 }
 .technology-list li {
 	border-bottom: 1px solid var(--line);
 	color: var(--muted);
 	font-size: 0.92rem;
 	padding: 0.65rem 0;
+}
+@keyframes technology-panel-in {
+	from {
+		opacity: 0;
+		transform: translateY(0.35rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.technology-list.is-active {
+	animation: technology-panel-in 180ms ease both;
 }
 .service-item {
 	border-left: 1px solid var(--line);
@@ -606,12 +660,16 @@ section.section--muted:has(.problem-list) {
 	flex-direction: column;
 	min-height: 420px;
 	padding: 2rem;
+	--pricing-meta-color: var(--muted);
+	--pricing-meta-label-color: var(--ink);
 }
 .pricing-card.featured {
 	background: var(--red);
 	border-color: var(--red);
 	color: #fff7eb;
 	transform: translateY(-1rem);
+	--pricing-meta-color: #ffe3d8;
+	--pricing-meta-label-color: #fff7eb;
 }
 .pricing-card__label {
 	color: var(--red);
@@ -640,6 +698,25 @@ section.section--muted:has(.problem-list) {
 }
 .pricing-card.featured .pricing-card__description {
 	color: #ffe3d8;
+}
+.pricing-card__meta {
+	display: grid;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+.pricing-card__meta p {
+	color: var(--pricing-meta-color);
+	font-size: 0.78rem;
+	line-height: 1.4;
+	margin: 0;
+}
+.pricing-card__meta strong {
+	color: var(--pricing-meta-label-color);
+	display: block;
+	font-size: 0.65rem;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.25rem;
+	text-transform: uppercase;
 }
 .pricing-card__price {
 	border-bottom: 1px solid var(--line);
@@ -908,6 +985,9 @@ section.section--muted:has(.problem-list) {
 	color: var(--red);
 	margin-left: 0.35rem;
 }
+.technology-trigger.is-active span {
+	transform: rotate(45deg);
+}
 .contact-form {
 	border-top: 1px solid var(--line);
 }
@@ -999,7 +1079,6 @@ section.section--muted:has(.problem-list) {
 	.projects-grid,
 	.service-grid,
 	.team-grid,
-	.technology-grid,
 	.pricing-grid,
 	.split-grid,
 	.case-hero,
@@ -1024,6 +1103,22 @@ section.section--muted:has(.problem-list) {
 	}
 	.service-grid {
 		gap: 2rem;
+	}
+	.technology-tabs {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.technology-trigger {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+	.technology-trigger + .technology-trigger {
+		padding-left: 0;
+	}
+	.technology-panel {
+		height: 19rem;
+	}
+	.technology-panel .technology-list {
+		grid-template-columns: repeat(2, 1fr);
 	}
 	.services-modes {
 		margin-top: 4rem;

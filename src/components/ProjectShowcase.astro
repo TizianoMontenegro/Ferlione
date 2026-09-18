@@ -17,19 +17,28 @@ const variant = variants[index % variants.length];
       <span>{project.service}</span>
       <span>{project.deliverables.length} entregables</span>
     </div>
+    <a
+      class="project-showcase__link button button--outline"
+      href={project.url ?? '#'}
+      target={project.url ? '_blank' : undefined}
+      rel={project.url ? 'noreferrer' : undefined}
+      data-project-link={project.url ? undefined : 'placeholder'}
+    >
+      Ver página del proyecto <span>↗</span>
+    </a>
   </div>
   <div class="project-showcase__details">
     <div class="project-showcase__detail">
-      <p class="eyebrow">El reto</p>
-      <p>{project.challenge}</p>
+      <p class="eyebrow">Problema</p>
+      <p>{project.problem}</p>
     </div>
     <div class="project-showcase__detail">
-      <p class="eyebrow">El enfoque</p>
-      <p>{project.approach}</p>
+      <p class="eyebrow">Solución</p>
+      <p>{project.solution}</p>
     </div>
     <div class="project-showcase__detail">
-      <p class="eyebrow">El resultado</p>
-      <p>{project.result}</p>
+      <p class="eyebrow">Resultado esperado</p>
+      <p>{project.expectedResult}</p>
     </div>
     <div class="project-showcase__detail project-showcase__deliverables">
       <p class="eyebrow">Entregables</p>

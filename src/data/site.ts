@@ -31,46 +31,69 @@ export const services = [
 
 export const projects = [
 	{
-		slug: 'norte-estudio',
-		name: 'Norte Estudio',
-		category: 'Marca profesional',
-		service: 'Estructura y desarrollo web',
-		year: 'Caso conceptual',
+		slug: 'aurea-propiedades',
+		url: 'https://aureapropiedades.vercel.app/',
+		name: 'Áurea Propiedades',
+		category: 'Inmobiliaria',
+		service: 'Diseño y desarrollo web',
+		year: 'Proyecto publicado',
 		accent: 'sand',
 		summary:
-			'Una presencia digital clara para convertir experiencia en conversaciones.',
+			'Una experiencia inmobiliaria para descubrir propiedades y avanzar hacia una decisión con más claridad.',
 		gallery: [
 			{
-				src: '/columns-marble.jpeg',
-				alt: 'Vista conceptual de Norte Estudio',
-				label: 'Vista principal',
+				src: '/projects/aurea/a1.png',
+				alt: 'Portada de Áurea Propiedades con buscador inmobiliario',
+				label: 'Portada y buscador',
 			},
 			{
-				src: '/black-marble-texture.jpeg',
-				alt: 'Detalle conceptual de Norte Estudio',
-				label: 'Detalle de contenido',
+				src: '/projects/aurea/a2.png',
+				alt: 'Selección de propiedades de Áurea Propiedades',
+				label: 'Selección de propiedades',
 			},
 			{
-				src: '/black-volcanic-stone-texture.jpeg',
-				alt: 'Vista móvil conceptual de Norte Estudio',
-				label: 'Experiencia responsive',
+				src: '/projects/aurea/a3.png',
+				alt: 'Listado inmobiliario de Áurea Propiedades',
+				label: 'Listado inmobiliario',
+			},
+			{
+				src: '/projects/aurea/a4.png',
+				alt: 'Detalle de una propiedad de Áurea Propiedades',
+				label: 'Detalle de propiedad',
+			},
+			{
+				src: '/projects/aurea/a5.png',
+				alt: 'Información de una propiedad en Áurea Propiedades',
+				label: 'Información y características',
+			},
+			{
+				src: '/projects/aurea/a6.png',
+				alt: 'Propuesta de valor de Áurea Propiedades',
+				label: 'Propuesta de valor',
+			},
+			{
+				src: '/projects/aurea/a7.png',
+				alt: 'Método de trabajo y cierre de Áurea Propiedades',
+				label: 'Método y cierre',
 			},
 		],
-		challenge:
-			'La propuesta de valor estaba repartida entre distintos canales y era difícil entender el siguiente paso.',
-		approach:
-			'Se organizó la oferta alrededor de problemas concretos, se redujo la navegación y se llevó la conversación al contacto.',
-		result:
-			'Ejemplo de cómo una estructura editorial puede hacer más comprensible un servicio profesional.',
+		problem:
+			'Buscar una propiedad podía resultar disperso: había que cruzar operación, tipo de inmueble, ubicación, precio y cantidad de habitaciones.',
+		solution:
+			'Se construyó una experiencia editorial y funcional que permite explorar propiedades en venta o alquiler, filtrar la búsqueda y pasar de una selección a una consulta.',
+		expectedResult:
+			'Una búsqueda más clara y una presentación cuidada para ayudar a que cada persona encuentre opciones relevantes y avance hacia una visita o consulta.',
 		deliverables: [
-			'Estrategia de contenidos',
-			'Arquitectura de información',
+			'Arquitectura de información inmobiliaria',
+			'Filtros de búsqueda',
+			'Fichas de propiedades',
 			'Diseño responsive',
 			'Desarrollo web',
 		],
 	},
 	{
 		slug: 'casa-lumen',
+		url: null,
 		name: 'Casa Lumen',
 		category: 'Negocio local',
 		service: 'Diseño y experiencia móvil',
@@ -95,11 +118,11 @@ export const projects = [
 				label: 'Experiencia responsive',
 			},
 		],
-		challenge:
+		problem:
 			'La marca tenía una oferta atractiva, pero la información importante quedaba escondida en una experiencia poco adaptable.',
-		approach:
+		solution:
 			'Se priorizaron horarios, propuesta y contacto desde móvil, con una identidad cálida y una jerarquía más precisa.',
-		result:
+		expectedResult:
 			'Ejemplo de cómo una web puede reducir dudas antes de una primera consulta.',
 		deliverables: [
 			'Mapa de contenidos',
@@ -110,6 +133,7 @@ export const projects = [
 	},
 	{
 		slug: 'orbita-producto',
+		url: null,
 		name: 'Órbita Producto',
 		category: 'Producto digital',
 		service: 'Landing de lanzamiento',
@@ -134,11 +158,11 @@ export const projects = [
 				label: 'Experiencia responsive',
 			},
 		],
-		challenge:
+		problem:
 			'El producto resolvía un problema real, pero la página hablaba demasiado de funciones y poco del resultado.',
-		approach:
+		solution:
 			'Se ordenó el argumento de venta por contexto, beneficio, prueba y llamada a la acción.',
-		result:
+		expectedResult:
 			'Ejemplo de cómo una landing puede acompañar la decisión sin saturar de información.',
 		deliverables: [
 			'Posicionamiento',
@@ -181,40 +205,68 @@ export const problems = [
 
 export const pricingPlans = [
 	{
-		title: 'Ordenar la idea',
-		label: 'Punto de partida',
+		title: 'Presencia inicial',
+		label: 'Para empezar',
 		description:
-			'Para transformar una intuición o un problema abierto en un alcance posible.',
+			'Una landing page clara para presentar tu propuesta y empezar a recibir consultas.',
+		problem:
+			'Tienes una oferta concreta, pero todavía no una presencia online que la explique y genere confianza.',
+		audience:
+			'Negocios locales, profesionales independientes y marcas personales.',
 		features: [
-			'Objetivos y prioridades',
-			'Mapa inicial del sitio',
-			'Siguiente paso recomendado',
+			'Estructura y copy de una landing page',
+			'Diseño responsive y desarrollo web',
+			'Contacto por WhatsApp o formulario',
 		],
-		cta: 'Definir el punto de partida',
+		cta: 'Hablar de mi presencia inicial',
 	},
 	{
-		title: 'Proyecto puntual',
-		label: 'Alcance definido',
+		title: 'Mejora digital',
+		label: 'Si ya tienes web',
 		description:
-			'Para construir y publicar una web con entregables, calendario y objetivos claros.',
+			'Rediseño de una web existente para modernizarla, ordenar el mensaje y hacerla más efectiva.',
+		problem:
+			'Tu web quedó atrás, no representa la calidad de tu negocio o recibe visitas que no se convierten en consultas.',
+		audience:
+			'Negocios y profesionales con una web que necesita una revisión profunda.',
 		features: [
-			'Estructura y contenido',
-			'Diseño responsive',
-			'Desarrollo y publicación',
+			'Auditoría de contenido y experiencia',
+			'Reestructuración y nuevo diseño responsive',
+			'Mejora de llamadas a la acción y contacto',
 		],
-		cta: 'Pedir presupuesto',
+		cta: 'Mejorar mi web',
+	},
+	{
+		title: 'Presencia profesional',
+		label: 'Para mostrar tu recorrido',
+		description:
+			'Una web corporativa completa para mostrar servicios, experiencia y casos de éxito con claridad.',
+		problem:
+			'Necesitas una base sólida para explicar lo que haces, respaldar tu experiencia y facilitar el siguiente paso.',
+		audience:
+			'Empresas de servicios, estudios y profesionales con una oferta consolidada.',
+		features: [
+			'Arquitectura de páginas y contenidos',
+			'Diseño de servicios, equipo y casos',
+			'Desarrollo, publicación y formulario de contacto',
+		],
+		cta: 'Pedir una propuesta',
 		featured: true,
 	},
 	{
-		title: 'Colaboración mensual',
-		label: 'Evolución continua',
+		title: 'Sistema de crecimiento',
+		label: 'Solución personalizada',
 		description:
-			'Para mantener, medir y mejorar la web según las prioridades de cada mes.',
+			'Una solución digital conectada a la operación de tu negocio para captar y gestionar oportunidades.',
+		problem:
+			'Tu negocio necesita reservas, automatizaciones, un área privada o una gestión de clientes que una web estándar no cubre.',
+		audience:
+			'Negocios en expansión y equipos con procesos digitales específicos.',
 		features: [
-			'Soporte y mantenimiento',
-			'Mejoras priorizadas',
-			'Revisión continua',
+			'Relevamiento del proceso y alcance',
+			'Reservas, automatizaciones o áreas privadas',
+			'Integraciones y evolución por etapas',
 		],
-		cta: 'Hablar de una colaboración',
+		cta: 'Diseñar mi sistema',
 	},
 ];
