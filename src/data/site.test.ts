@@ -15,7 +15,9 @@ describe('contenido del portfolio', () => {
 		expect(slugs.size).toBe(projects.length);
 		for (const project of projects) {
 			expect(project.summary.length).toBeGreaterThan(20);
-			expect(project.challenge.length).toBeGreaterThan(20);
+			expect(project.problem.length).toBeGreaterThan(20);
+			expect(project.solution.length).toBeGreaterThan(20);
+			expect(project.expectedResult.length).toBeGreaterThan(20);
 			expect(project.deliverables.length).toBeGreaterThan(0);
 		}
 	});

@@ -56,11 +56,11 @@ export const projects = [
 				label: 'Experiencia responsive',
 			},
 		],
-		challenge:
+		problem:
 			'La propuesta de valor estaba repartida entre distintos canales y era difícil entender el siguiente paso.',
-		approach:
+		solution:
 			'Se organizó la oferta alrededor de problemas concretos, se redujo la navegación y se llevó la conversación al contacto.',
-		result:
+		expectedResult:
 			'Ejemplo de cómo una estructura editorial puede hacer más comprensible un servicio profesional.',
 		deliverables: [
 			'Estrategia de contenidos',
@@ -95,11 +95,11 @@ export const projects = [
 				label: 'Experiencia responsive',
 			},
 		],
-		challenge:
+		problem:
 			'La marca tenía una oferta atractiva, pero la información importante quedaba escondida en una experiencia poco adaptable.',
-		approach:
+		solution:
 			'Se priorizaron horarios, propuesta y contacto desde móvil, con una identidad cálida y una jerarquía más precisa.',
-		result:
+		expectedResult:
 			'Ejemplo de cómo una web puede reducir dudas antes de una primera consulta.',
 		deliverables: [
 			'Mapa de contenidos',
@@ -134,11 +134,11 @@ export const projects = [
 				label: 'Experiencia responsive',
 			},
 		],
-		challenge:
+		problem:
 			'El producto resolvía un problema real, pero la página hablaba demasiado de funciones y poco del resultado.',
-		approach:
+		solution:
 			'Se ordenó el argumento de venta por contexto, beneficio, prueba y llamada a la acción.',
-		result:
+		expectedResult:
 			'Ejemplo de cómo una landing puede acompañar la decisión sin saturar de información.',
 		deliverables: [
 			'Posicionamiento',
