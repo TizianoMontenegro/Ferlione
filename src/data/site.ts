@@ -41,37 +41,37 @@ export const projects = [
 			'Una experiencia inmobiliaria para descubrir propiedades y avanzar hacia una decisión con más claridad.',
 		gallery: [
 			{
-				src: 'https://i.postimg.cc/zfRbsf7f/a0.png',
+				src: '/projects/aurea/a1.png',
 				alt: 'Portada de Áurea Propiedades con buscador inmobiliario',
 				label: 'Portada y buscador',
 			},
 			{
-				src: 'https://i.postimg.cc/ZqyBGqHb/a1.png',
+				src: '/projects/aurea/a2.png',
 				alt: 'Selección de propiedades de Áurea Propiedades',
 				label: 'Selección de propiedades',
 			},
 			{
-				src: 'https://i.postimg.cc/s2ZQk2mf/a2.png',
+				src: '/projects/aurea/a3.png',
 				alt: 'Listado inmobiliario de Áurea Propiedades',
 				label: 'Listado inmobiliario',
 			},
 			{
-				src: 'https://i.postimg.cc/g06XC0sY/a3.png',
+				src: '/projects/aurea/a4.png',
 				alt: 'Detalle de una propiedad de Áurea Propiedades',
 				label: 'Detalle de propiedad',
 			},
 			{
-				src: 'https://i.postimg.cc/CKfB3K7p/a4.png',
+				src: '/projects/aurea/a5.png',
 				alt: 'Información de una propiedad en Áurea Propiedades',
 				label: 'Información y características',
 			},
 			{
-				src: 'https://i.postimg.cc/7LTGFLVF/a5.png',
+				src: '/projects/aurea/a6.png',
 				alt: 'Sección de contacto de Áurea Propiedades',
 				label: 'Contacto y consulta',
 			},
 			{
-				src: 'https://i.postimg.cc/nLQjyL2b/a6.png',
+				src: '/projects/aurea/a7.png',
 				alt: 'Experiencia responsive de Áurea Propiedades',
 				label: 'Experiencia responsive',
 			},
