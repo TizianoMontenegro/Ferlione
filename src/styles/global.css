@@ -363,7 +363,7 @@ section.section--muted:has(.problem-list) {
 	display: none;
 }
 .project-gallery__slide {
-	aspect-ratio: 4 / 3;
+	aspect-ratio: 16 / 9;
 	background: var(--panel);
 	flex: 0 0 100%;
 	margin: 0;
@@ -375,7 +375,7 @@ section.section--muted:has(.problem-list) {
 .project-gallery__slide img {
 	display: block;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	width: 100%;
 }
 .project-gallery__slide::after {
