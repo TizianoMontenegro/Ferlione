@@ -41,39 +41,39 @@ export const projects = [
 			'Una experiencia inmobiliaria para descubrir propiedades y avanzar hacia una decisión con más claridad.',
 		gallery: [
 			{
-				src: '/projects/aurea/a0.png',
+				src: '/projects/aurea/a1.png',
 				alt: 'Portada de Áurea Propiedades con buscador inmobiliario',
 				label: 'Portada y buscador',
 			},
 			{
-				src: '/projects/aurea/a1.png',
+				src: '/projects/aurea/a2.png',
 				alt: 'Selección de propiedades de Áurea Propiedades',
 				label: 'Selección de propiedades',
 			},
 			{
-				src: '/projects/aurea/a2.png',
+				src: '/projects/aurea/a3.png',
 				alt: 'Listado inmobiliario de Áurea Propiedades',
 				label: 'Listado inmobiliario',
 			},
 			{
-				src: '/projects/aurea/a3.png',
+				src: '/projects/aurea/a4.png',
 				alt: 'Detalle de una propiedad de Áurea Propiedades',
 				label: 'Detalle de propiedad',
 			},
 			{
-				src: '/projects/aurea/a4.png',
+				src: '/projects/aurea/a5.png',
 				alt: 'Información de una propiedad en Áurea Propiedades',
 				label: 'Información y características',
 			},
 			{
-				src: '/projects/aurea/a5.png',
-				alt: 'Sección de contacto de Áurea Propiedades',
-				label: 'Contacto y consulta',
+				src: '/projects/aurea/a6.png',
+				alt: 'Propuesta de valor de Áurea Propiedades',
+				label: 'Propuesta de valor',
 			},
 			{
-				src: '/projects/aurea/a6.png',
-				alt: 'Experiencia responsive de Áurea Propiedades',
-				label: 'Experiencia responsive',
+				src: '/projects/aurea/a7.png',
+				alt: 'Método de trabajo y cierre de Áurea Propiedades',
+				label: 'Método y cierre',
 			},
 		],
 		problem:
