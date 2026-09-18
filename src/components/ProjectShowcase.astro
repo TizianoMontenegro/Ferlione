@@ -17,6 +17,9 @@ const variant = variants[index % variants.length];
       <span>{project.service}</span>
       <span>{project.deliverables.length} entregables</span>
     </div>
+    <a class="project-showcase__link button button--outline" href={`/trabajo/${project.slug}`}>
+      Ver página del proyecto <span>↗</span>
+    </a>
   </div>
   <div class="project-showcase__details">
     <div class="project-showcase__detail">

@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectGallery from '../../components/ProjectGallery.astro';
+import { projects } from '../../data/site';
+
+export function getStaticPaths() {
+	return projects.map((project) => ({
+		params: { slug: project.slug },
+		props: { project },
+	}));
+}
+
+type Project = (typeof projects)[number];
+const { project } = Astro.props as { project: Project };
+---
+<Layout title={`${project.name} — Ferlione`} description={project.summary}>
+  <div class="page-hero page-hero--case">
+    <a class="project-back-link" href="/#trabajo">← Volver al trabajo</a>
+  </div>
+  <section class="case-hero">
+    <div class={`case-hero__art ${project.accent}`}><strong>{project.name.charAt(0)}</strong></div>
+    <div class="case-hero__copy">
+      <p class="section-label">{project.category} · {project.year}</p>
+      <h1>{project.name}</h1>
+      <p>{project.summary}</p>
+      <a class="button" href="/#contacto">Hablemos de un proyecto similar <span>↗</span></a>
+    </div>
+  </section>
+  <section class="case-detail">
+    <div>
+      <p class="section-label">El caso</p>
+      <h2>Una solución con una razón concreta para existir.</h2>
+    </div>
+    <div class="case-detail__body">
+      <h3>Problema</h3>
+      <p>{project.problem}</p>
+      <h3>Solución</h3>
+      <p>{project.solution}</p>
+      <h3>Resultado esperado</h3>
+      <p>{project.expectedResult}</p>
+      <h3>Entregables</h3>
+      <ul class="deliverables">{project.deliverables.map((item) => <li>{item}</li>)}</ul>
+    </div>
+  </section>
+  <section class="section section--muted">
+    <div class="section__intro">
+      <div>
+        <p class="section-label">Vista del proyecto</p>
+        <h2>Una experiencia pensada para avanzar.</h2>
+      </div>
+      <p>{project.service}</p>
+    </div>
+    <ProjectGallery project={project} />
+  </section>
+  <section class="cta">
+    <p class="section-label">Siguiente paso</p>
+    <h2>¿Tienes un problema parecido?</h2>
+    <a class="button button--light" href="/#contacto">Cuéntame tu idea <span>↗</span></a>
+  </section>
+</Layout>
