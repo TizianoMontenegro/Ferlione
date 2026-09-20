@@ -1,13 +1,13 @@
 @import "tailwindcss";
 :root {
-	--ink: #f3f1e9;
-	--muted: #aaa69b;
-	--paper: #121210;
-	--paper-deep: #1c1b18;
-	--panel: #090908;
-	--red: #cf4b34;
-	--red-dark: #a43827;
-	--line: rgba(243, 241, 233, 0.16);
+	--ink: #e8e1d5;
+	--muted: rgba(232, 225, 213, 0.65);
+	--paper: #0a0a0a;
+	--paper-deep: rgba(232, 225, 213, 0.06);
+	--panel: #0a0a0a;
+	--red: #8c1d18;
+	--red-dark: #8c1d18;
+	--line: rgba(232, 225, 213, 0.16);
 	--serif: Georgia, "Times New Roman", serif;
 	--sans:
 		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -70,8 +70,8 @@ select {
 .site-header.is-scrolled {
 	backdrop-filter: blur(18px) saturate(120%);
 	-webkit-backdrop-filter: blur(18px) saturate(120%);
-	background: rgba(9, 9, 8, 0.28);
-	border-bottom-color: rgba(243, 241, 233, 0.14);
+	background: rgba(10, 10, 10, 0.28);
+	border-bottom-color: rgba(232, 225, 213, 0.14);
 }
 .wordmark {
 	align-items: center;
@@ -106,9 +106,9 @@ select {
 	background-image:
 		radial-gradient(
 			ellipse at center,
-			rgba(9, 9, 8, 0.95) 0%,
-			rgba(9, 9, 8, 0.82) 34%,
-			rgba(9, 9, 8, 0.38) 62%,
+			rgba(10, 10, 10, 0.95) 0%,
+			rgba(10, 10, 10, 0.82) 34%,
+			rgba(10, 10, 10, 0.38) 62%,
 			transparent 86%
 		),
 		url("/columns-marble.jpeg");
@@ -165,7 +165,7 @@ select {
 .button {
 	align-items: center;
 	background: var(--red);
-	color: #fffaf0;
+	color: #e8e1d5;
 	display: inline-flex;
 	font-size: 0.83rem;
 	font-weight: 700;
@@ -214,14 +214,14 @@ select {
 }
 .section--work {
 	background-image:
-		linear-gradient(rgba(9, 9, 8, 0.5), rgba(9, 9, 8, 0.5)),
+		linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),
 		url("/black-marble-gold.jpeg");
 	background-position: center;
 	background-size: cover;
 }
 .section#proceso {
 	background-image:
-		linear-gradient(rgba(9, 9, 8, 0.5), rgba(9, 9, 8, 0.5)),
+		linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),
 		url("/black-marble-texture.jpeg");
 	background-position: center;
 	background-size: cover;
@@ -231,14 +231,14 @@ select {
 }
 .section--about {
 	background-image:
-		linear-gradient(rgba(9, 9, 8, 0.42), rgba(9, 9, 8, 0.42)),
+		linear-gradient(rgba(10, 10, 10, 0.42), rgba(10, 10, 10, 0.42)),
 		url("/black-velvet-texture.jpeg");
 	background-position: center;
 	background-size: cover;
 }
 section.section--muted:has(.problem-list) {
 	background-image:
-		linear-gradient(rgba(9, 9, 8, 0.42), rgba(9, 9, 8, 0.42)),
+		linear-gradient(rgba(10, 10, 10, 0.42), rgba(10, 10, 10, 0.42)),
 		url("/black-volcanic-stone-texture.jpeg");
 	background-position: center;
 	background-size: cover;
@@ -388,7 +388,7 @@ section.section--muted:has(.problem-list) {
 	width: 100%;
 }
 .project-gallery__slide::after {
-	background: linear-gradient(180deg, transparent 55%, rgba(9, 9, 8, 0.8));
+	background: linear-gradient(180deg, transparent 55%, rgba(10, 10, 10, 0.8));
 	content: "";
 	inset: 0;
 	pointer-events: none;
@@ -772,10 +772,10 @@ section.section--muted:has(.problem-list) {
 .pricing-card.featured {
 	background: var(--red);
 	border-color: var(--red);
-	color: #fff7eb;
+	color: #e8e1d5;
 	transform: translateY(-1rem);
-	--pricing-meta-color: #ffe3d8;
-	--pricing-meta-label-color: #fff7eb;
+	--pricing-meta-color: rgba(232, 225, 213, 0.88);
+	--pricing-meta-label-color: #e8e1d5;
 }
 .pricing-card__label {
 	color: var(--red);
@@ -786,7 +786,7 @@ section.section--muted:has(.problem-list) {
 	text-transform: uppercase;
 }
 .pricing-card.featured .pricing-card__label {
-	color: #ffd4c6;
+	color: #b08d57;
 }
 .pricing-card h3 {
 	font-family: var(--serif);
@@ -803,7 +803,7 @@ section.section--muted:has(.problem-list) {
 	max-width: 290px;
 }
 .pricing-card.featured .pricing-card__description {
-	color: #ffe3d8;
+	color: rgba(232, 225, 213, 0.88);
 }
 .pricing-card__meta {
 	display: grid;
@@ -887,12 +887,12 @@ section.section--muted:has(.problem-list) {
 }
 .cta {
 	background: var(--red);
-	color: #fff7eb;
+	color: #e8e1d5;
 	margin: 0 auto;
 	padding: 6rem 4vw;
 }
 .cta .section-label {
-	color: #ffd4c6;
+	color: #b08d57;
 }
 .cta h2 {
 	font-family: var(--serif);
@@ -930,8 +930,8 @@ section.section--muted:has(.problem-list) {
 	width: 16rem;
 }
 .footer-bottom {
-	border-top: 1px solid rgba(243, 241, 233, 0.2);
-	color: #aaa89f;
+	border-top: 1px solid rgba(232, 225, 213, 0.2);
+	color: rgba(232, 225, 213, 0.58);
 	font-size: 0.75rem;
 	margin-top: 6rem;
 	padding-top: 1.2rem;
@@ -940,7 +940,7 @@ section.section--muted:has(.problem-list) {
 	color: var(--ink);
 }
 .site-footer .footer-kicker {
-	color: #e15a42;
+	color: #b08d57;
 }
 .page-hero {
 	margin: 0 auto;
@@ -971,10 +971,10 @@ section.section--muted:has(.problem-list) {
 	background: var(--red);
 }
 .case-hero__art.blue {
-	background: #354954;
+	background: #0a0a0a;
 }
 .case-hero__art.sand {
-	background: #aa9880;
+	background: #b08d57;
 	color: var(--ink);
 }
 .case-hero__art::before {
@@ -1051,7 +1051,7 @@ section.section--muted:has(.problem-list) {
 }
 .pricing-card.featured li,
 .pricing-card.featured li::before {
-	color: #ffe3d8;
+	color: rgba(232, 225, 213, 0.88);
 }
 .contact-grid {
 	display: grid;
@@ -1141,8 +1141,8 @@ section.section--muted:has(.problem-list) {
 	font-size: 0.72rem;
 }
 .success-message {
-	background: #dfe8d9;
-	color: #28402b;
+	background: #e8e1d5;
+	color: #0a0a0a;
 	display: none;
 	font-size: 0.9rem;
 	margin-top: 1rem;
@@ -1159,9 +1159,9 @@ section.section--muted:has(.problem-list) {
 		background-image:
 			radial-gradient(
 				ellipse at center,
-				rgba(9, 9, 8, 0.95) 0%,
-				rgba(9, 9, 8, 0.78) 42%,
-				rgba(9, 9, 8, 0.34) 72%,
+				rgba(10, 10, 10, 0.95) 0%,
+				rgba(10, 10, 10, 0.78) 42%,
+				rgba(10, 10, 10, 0.34) 72%,
 				transparent 100%
 			),
 			url("/columns-marble.jpeg");
