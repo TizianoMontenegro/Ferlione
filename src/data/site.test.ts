@@ -13,7 +13,7 @@ describe('contenido del portfolio', () => {
 		expect(services).toHaveLength(4);
 		expect(processSteps).toHaveLength(4);
 		expect(problems.length).toBeGreaterThanOrEqual(4);
-		expect(pricingPlans).toHaveLength(4);
+		expect(pricingPlans).toHaveLength(3);
 	});
 
 	test('cada proyecto tiene una ruta y un caso completo', () => {
@@ -46,11 +46,18 @@ describe('contenido del portfolio', () => {
 	});
 
 	test('cada plan explica su alcance y siguiente acción', () => {
+		expect(pricingPlans.map((plan) => plan.title)).toEqual([
+			'Lanzamiento',
+			'Reposicionamiento',
+			'Sistema digital',
+		]);
 		for (const plan of pricingPlans) {
 			expect(plan.problem.length).toBeGreaterThan(20);
 			expect(plan.audience.length).toBeGreaterThan(10);
 			expect(plan.features.length).toBeGreaterThan(0);
 			expect(plan.cta.length).toBeGreaterThan(5);
+			expect(plan.result.length).toBeGreaterThan(20);
+			expect(plan.duration.length).toBeGreaterThan(3);
 		}
 	});
 });
