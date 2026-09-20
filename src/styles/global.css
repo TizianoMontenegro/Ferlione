@@ -5,8 +5,13 @@
 	--paper: #0a0a0a;
 	--paper-deep: rgba(232, 225, 213, 0.06);
 	--panel: #0a0a0a;
-	--red: #8c1d18;
+	--red: var(--red-text);
 	--red-dark: #8c1d18;
+	--red-fill: #8c1d18;
+	--red-text: #b9362f;
+	--bronze: #b08d57;
+	--bronze-text: #c9a66b;
+	--accent: var(--bronze-text);
 	--line: rgba(232, 225, 213, 0.16);
 	--serif: Georgia, "Times New Roman", serif;
 	--sans:
@@ -164,7 +169,7 @@ select {
 }
 .button {
 	align-items: center;
-	background: var(--red);
+	background: var(--red-fill);
 	color: #e8e1d5;
 	display: inline-flex;
 	font-size: 0.83rem;
@@ -428,7 +433,7 @@ section.section--muted:has(.problem-list) {
 	width: 2.4rem;
 }
 .project-gallery__controls button:hover {
-	border-color: var(--red);
+	border-color: var(--red-fill);
 	color: var(--red);
 }
 .project-gallery__status {
@@ -770,8 +775,8 @@ section.section--muted:has(.problem-list) {
 	--pricing-meta-label-color: var(--ink);
 }
 .pricing-card.featured {
-	background: var(--red);
-	border-color: var(--red);
+	background: var(--red-fill);
+	border-color: var(--red-fill);
 	color: #e8e1d5;
 	transform: translateY(-1rem);
 	--pricing-meta-color: rgba(232, 225, 213, 0.88);
@@ -786,7 +791,7 @@ section.section--muted:has(.problem-list) {
 	text-transform: uppercase;
 }
 .pricing-card.featured .pricing-card__label {
-	color: #b08d57;
+	color: var(--bronze-text);
 }
 .pricing-card h3 {
 	font-family: var(--serif);
@@ -886,13 +891,13 @@ section.section--muted:has(.problem-list) {
 	max-width: 330px;
 }
 .cta {
-	background: var(--red);
+	background: var(--red-fill);
 	color: #e8e1d5;
 	margin: 0 auto;
 	padding: 6rem 4vw;
 }
 .cta .section-label {
-	color: #b08d57;
+	color: var(--bronze-text);
 }
 .cta h2 {
 	font-family: var(--serif);
@@ -940,7 +945,7 @@ section.section--muted:has(.problem-list) {
 	color: var(--ink);
 }
 .site-footer .footer-kicker {
-	color: #b08d57;
+	color: var(--bronze-text);
 }
 .page-hero {
 	margin: 0 auto;
@@ -968,7 +973,7 @@ section.section--muted:has(.problem-list) {
 	position: relative;
 }
 .case-hero__art.red {
-	background: var(--red);
+	background: var(--red-fill);
 }
 .case-hero__art.blue {
 	background: #0a0a0a;
@@ -1084,7 +1089,7 @@ section.section--muted:has(.problem-list) {
 	padding-bottom: 0.35rem;
 }
 .social-links a:hover {
-	border-bottom-color: var(--red);
+	border-bottom-color: var(--red-fill);
 	color: var(--red);
 }
 .social-links span {
