@@ -1,30 +1,30 @@
 export const services = [
 	{
 		number: '01',
-		title: 'Definir la idea',
+		title: 'Estrategia',
 		description:
-			'Ordenamos objetivos, público, propuesta y prioridades para convertir una intuición en un proyecto posible.',
+			'Ordenamos objetivos, público, propuesta y prioridades para definir qué debe resolver la web.',
 		tags: ['Estrategia', 'Alcance', 'Prioridades'],
 	},
 	{
 		number: '02',
-		title: 'Diseñar la experiencia',
+		title: 'Experiencia',
 		description:
-			'Construimos una estructura clara y una dirección visual que ayudan a entender y elegir.',
+			'Diseñamos la estructura, los recorridos y la dirección visual para facilitar decisiones.',
 		tags: ['UX', 'Contenido', 'Dirección visual'],
 	},
 	{
 		number: '03',
-		title: 'Desarrollar desde cero',
+		title: 'Desarrollo',
 		description:
-			'Implementamos una web rápida, responsive y mantenible, preparada para publicar y crecer.',
+			'Construimos una web rápida, responsive, accesible y preparada para mantenerse.',
 		tags: ['Astro', 'Accesibilidad', 'Rendimiento'],
 	},
 	{
 		number: '04',
-		title: 'Mejorar cada mes',
+		title: 'Evolución',
 		description:
-			'Acompañamos la evolución con soporte, contenido y mejoras guiadas por las prioridades del negocio.',
+			'Acompañamos las mejoras posteriores con soporte, contenidos, optimización y nuevas funcionalidades.',
 		tags: ['Soporte', 'Optimización', 'Evolución'],
 	},
 ];
@@ -37,6 +37,7 @@ export const projects = [
 		category: 'Inmobiliaria',
 		service: 'Diseño y desarrollo web',
 		year: 'Proyecto publicado',
+		plan: 'Lanzamiento',
 		accent: 'sand',
 		summary:
 			'Una experiencia inmobiliaria para descubrir propiedades y avanzar hacia una decisión con más claridad.',
@@ -98,6 +99,7 @@ export const projects = [
 		category: 'Negocio local',
 		service: 'Diseño y experiencia móvil',
 		year: 'Caso conceptual',
+		plan: 'Reposicionamiento',
 		accent: 'red',
 		summary:
 			'Una web directa para que visitar, reservar y volver resulte sencillo.',
@@ -138,6 +140,7 @@ export const projects = [
 		category: 'Producto digital',
 		service: 'Landing de lanzamiento',
 		year: 'Caso conceptual',
+		plan: 'Lanzamiento',
 		accent: 'blue',
 		summary:
 			'Una página de lanzamiento con foco en explicar, demostrar y activar.',
@@ -197,76 +200,120 @@ export const processSteps = [
 ];
 
 export const problems = [
-	'Tu web no explica con claridad lo que vendes.',
-	'Tu marca creció, pero tu sitio se quedó atrás.',
-	'Recibes visitas y pocas conversaciones.',
-	'Necesitas lanzar una oferta sin improvisar.',
+	{
+		text: 'Tu oferta es buena, pero cuesta entenderla.',
+		plan: 'Lanzamiento',
+		href: '#plan-lanzamiento',
+	},
+	{
+		text: 'Tu web ya no representa la calidad de tu negocio.',
+		plan: 'Reposicionamiento',
+		href: '#plan-reposicionamiento',
+	},
+	{
+		text: 'Recibes visitas, pero pocas consultas.',
+		plan: 'Reposicionamiento',
+		href: '#plan-reposicionamiento',
+	},
+	{
+		text: 'Necesitas lanzar algo nuevo y no sabes por dónde empezar.',
+		plan: 'Lanzamiento',
+		href: '#plan-lanzamiento',
+	},
+	{
+		text: 'Tu operación necesita una solución más específica que una web tradicional.',
+		plan: 'Sistema digital',
+		href: '#plan-sistema-digital',
+	},
 ];
 
 export const pricingPlans = [
 	{
-		title: 'Presencia inicial',
+		slug: 'lanzamiento',
+		title: 'Lanzamiento',
 		label: 'Para empezar',
 		description:
-			'Una landing page clara para presentar tu propuesta y empezar a recibir consultas.',
+			'Para profesionales, marcas personales y negocios que necesitan una presencia digital sólida para empezar a recibir consultas.',
 		problem:
-			'Tienes una oferta concreta, pero todavía no una presencia online que la explique y genere confianza.',
-		audience:
-			'Negocios locales, profesionales independientes y marcas personales.',
+			'Tienes una oferta concreta, pero todavía no una web que la explique con claridad y genere confianza.',
+		audience: 'Profesionales, marcas personales y negocios que empiezan.',
 		features: [
-			'Estructura y copy de una landing page',
-			'Diseño responsive y desarrollo web',
-			'Contacto por WhatsApp o formulario',
+			'Definición de objetivos y público',
+			'Estructura de contenidos y copy de la página',
+			'Diseño visual responsive',
+			'Desarrollo web',
+			'Formulario, email o WhatsApp',
+			'Configuración básica de SEO',
+			'Publicación y puesta en marcha',
 		],
-		cta: 'Hablar de mi presencia inicial',
+		result:
+			'Una web lista para explicar lo que haces y facilitar el siguiente contacto.',
+		duration: '2 a 4 semanas',
+		cta: 'Quiero lanzar mi web',
 	},
 	{
-		title: 'Mejora digital',
+		slug: 'reposicionamiento',
+		title: 'Reposicionamiento',
 		label: 'Si ya tienes web',
 		description:
-			'Rediseño de una web existente para modernizarla, ordenar el mensaje y hacerla más efectiva.',
+			'Para empresas y profesionales que ya tienen web, pero necesitan mejorar el mensaje, la estructura, el diseño o la conversión.',
 		problem:
 			'Tu web quedó atrás, no representa la calidad de tu negocio o recibe visitas que no se convierten en consultas.',
 		audience:
-			'Negocios y profesionales con una web que necesita una revisión profunda.',
+			'Empresas y profesionales con una web que necesita una revisión profunda.',
 		features: [
 			'Auditoría de contenido y experiencia',
-			'Reestructuración y nuevo diseño responsive',
-			'Mejora de llamadas a la acción y contacto',
+			'Revisión de propuesta de valor',
+			'Nueva arquitectura de información',
+			'Reorganización o reescritura de contenidos',
+			'Rediseño visual y mejora de llamadas a la acción',
+			'Desarrollo o migración',
+			'Revisión responsive',
+			'Medición básica de formularios y conversiones',
 		],
-		cta: 'Mejorar mi web',
+		result: 'Una web más clara, actual y orientada a generar oportunidades.',
+		duration: '4 a 6 semanas',
+		cta: 'Quiero mejorar mi web',
 	},
 	{
-		title: 'Presencia profesional',
-		label: 'Para mostrar tu recorrido',
+		slug: 'sistema-digital',
+		title: 'Sistema digital',
+		label: 'Para negocios en crecimiento',
 		description:
-			'Una web corporativa completa para mostrar servicios, experiencia y casos de éxito con claridad.',
+			'Para negocios que necesitan reservas, automatizaciones, áreas privadas, catálogos, gestión de clientes o integraciones específicas.',
 		problem:
-			'Necesitas una base sólida para explicar lo que haces, respaldar tu experiencia y facilitar el siguiente paso.',
-		audience:
-			'Empresas de servicios, estudios y profesionales con una oferta consolidada.',
+			'Una web estándar ya no cubre el proceso que tu negocio necesita organizar.',
+		audience: 'Negocios en crecimiento con procesos digitales específicos.',
 		features: [
-			'Arquitectura de páginas y contenidos',
-			'Diseño de servicios, equipo y casos',
-			'Desarrollo, publicación y formulario de contacto',
+			'Relevamiento del proceso',
+			'Definición de alcance y prioridades',
+			'Arquitectura técnica y diseño de la experiencia',
+			'Reservas, formularios avanzados o áreas privadas',
+			'Automatizaciones e integraciones externas',
+			'Base de datos y desarrollo por etapas',
+			'Soporte y evolución',
 		],
-		cta: 'Pedir una propuesta',
-		featured: true,
-	},
-	{
-		title: 'Sistema de crecimiento',
-		label: 'Solución personalizada',
-		description:
-			'Una solución digital conectada a la operación de tu negocio para captar y gestionar oportunidades.',
-		problem:
-			'Tu negocio necesita reservas, automatizaciones, un área privada o una gestión de clientes que una web estándar no cubre.',
-		audience:
-			'Negocios en expansión y equipos con procesos digitales específicos.',
-		features: [
-			'Relevamiento del proceso y alcance',
-			'Reservas, automatizaciones o áreas privadas',
-			'Integraciones y evolución por etapas',
-		],
+		result:
+			'Un sistema digital que conecta la experiencia del cliente con la operación del negocio.',
+		duration: 'Por etapas, según alcance',
 		cta: 'Diseñar mi sistema',
 	},
 ];
+
+export const planComparison = [
+	[
+		'Empezar desde cero',
+		'Lanzamiento',
+		'Web clara para presentar y captar consultas',
+	],
+	[
+		'Mejorar una web existente',
+		'Reposicionamiento',
+		'Mejor mensaje, estructura y conversión',
+	],
+	[
+		'Resolver procesos complejos',
+		'Sistema digital',
+		'Solución conectada con la operación',
+	],
+] as const;

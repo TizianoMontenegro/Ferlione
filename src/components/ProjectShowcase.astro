@@ -7,25 +7,23 @@ const { project, index } = Astro.props as { project: Project; index: number };
 const variants = ['feature', 'reverse', 'editorial'] as const;
 const variant = variants[index % variants.length];
 ---
-<article class={`project-showcase project-showcase--${variant}`}>
+<article id={`project-${project.slug}`} class={`project-showcase project-showcase--${variant}`}>
   <div class="project-showcase__visual"><ProjectGallery project={project} /></div>
   <div class="project-showcase__intro">
-    <p class="section-label">{project.category} · {project.year}</p>
+    <p class="section-label">{project.plan} · {project.category} · {project.year}</p>
     <h3>{project.name}</h3>
     <p class="project-showcase__summary">{project.summary}</p>
     <div class="project-showcase__facts">
       <span>{project.service}</span>
       <span>{project.deliverables.length} entregables</span>
     </div>
-    <a
-      class="project-showcase__link button button--outline"
-      href={project.url ?? '#'}
-      target={project.url ? '_blank' : undefined}
-      rel={project.url ? 'noreferrer' : undefined}
-      data-project-link={project.url ? undefined : 'placeholder'}
-    >
-      Ver página del proyecto <span>↗</span>
-    </a>
+    {project.url ? (
+      <a class="project-showcase__link button button--outline" href={project.url} target="_blank" rel="noreferrer">
+        Ver página del proyecto <span>↗</span>
+      </a>
+    ) : (
+      <span class="project-showcase__link project-showcase__concept">Exploración conceptual</span>
+    )}
   </div>
   <div class="project-showcase__details">
     <div class="project-showcase__detail">
